@@ -5,8 +5,9 @@ import Main from "../Layout/Main.jsx";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login.jsx";
 import SignUp from "../pages/SignUp/SignUp.jsx";
-import AddStaf from "../pages/Dashboard/AddStaf/AddStaf.jsx";
 import StaffList from "../pages/Dashboard/StaffList/StaffList.jsx";
+import AddStaff from "../pages/Dashboard/AddStaff/AddStaff.jsx";
+import EditStaff from "../pages/Dashboard/EditStaff/EditStaff.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,21 +19,25 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "logIn",
+        path: "login",
         element: <Login></Login>
       },
       {
-        path: "signUp",
+        path: "signup",
         element: <SignUp></SignUp>
       },
-      { 
-        path: "add-staf", 
-        element: <AddStaf />
+      {
+        path: "add-staff",
+        element: <AddStaff />
       },
-      { 
-        path: "staf-records", 
+      {
+        path: "staff-records",
         element: <StaffList />
 
+      },
+      {
+        path: "edit-staff/:id",
+        element: <EditStaff />
       },
     ],
   },

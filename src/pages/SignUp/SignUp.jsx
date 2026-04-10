@@ -14,7 +14,7 @@ const SignUp = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const [showPassword, setShowPassword] = useState(false); // password toggle
+    const [showPassword, setShowPassword] = useState(false); 
 
     const onSubmit = async (data) => {
         try {

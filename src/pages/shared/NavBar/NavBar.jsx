@@ -20,8 +20,8 @@ const NavBar = () => {
 
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/staf-records">Staf Records</Link></li>
-        <li><Link to="/add-staf">Add Staf</Link></li>
+        <li><Link to="/staff-records">Staff Records</Link></li>
+        <li><Link to="/add-staff">Add Staff</Link></li>
     </>
 
     return (
@@ -62,26 +62,26 @@ const NavBar = () => {
                 {
                     user ? (
                         <>
-                            <div className="avatar">
-                                <div className="w-10 h-10 rounded-full ring ring-[#D1A054] ring-offset-base-100 ring-offset-2">
-                                    <img
-                                        src={user_photo}
-                                        alt="User"
-                                        className="rounded-full"
-                                        // ছবির উপর মাউস রাখলে নাম দেখাবে
-                                        title={user_name}
-                                    />
+                            {/* টুলটিপ এখন সরাসরি মেইন ডিভ-এ আছে */}
+                            <div className="tooltip tooltip-left" data-tip={user?.displayName || "User"}>
+                                <div className="avatar">
+                                    <div className="w-10 h-10 rounded-full ring ring-[#D1A054] ring-offset-base-100 ring-offset-2">
+                                        <img
+                                            src={user?.photoURL || "https://i.ibb.co/4pDNDk1/avatar.png"}
+                                            alt="User"
+                                            className="rounded-full"
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                            {/* লগ আউট বাটন */}
-                            <button onClick={handleLogOut} className="btn btn-ghost  hover:bg-base-300 text-yellow-500 font-bold">
+
+                            <button onClick={handleLogOut} className="btn btn-ghost hover:bg-base-300 text-yellow-500 font-bold">
                                 Log Out
                             </button>
                         </>
                     ) : (
-                        // যদি ইউজার লগ ইন না থাকে
-                        <Link to="/logIn">
-                            <button className="btn btn-ghost  hover:bg-base-300 text-yellow-500 font-bold">
+                        <Link to="/login">
+                            <button className="btn btn-ghost hover:bg-base-300 text-yellow-500 font-bold">
                                 Log In
                             </button>
                         </Link>

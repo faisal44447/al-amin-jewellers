@@ -104,7 +104,7 @@ const Login = () => {
                     </form>
 
                     <p className="text-center mt-3">
-                        New here? <Link to="/signUp" className="text-blue-500">SignUp</Link>
+                        New here? <Link to="/signup" className="text-blue-500">SignUp</Link>
                     </p>
 
                     <SocialLogin />
