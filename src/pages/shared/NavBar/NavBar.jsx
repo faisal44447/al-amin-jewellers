@@ -53,20 +53,16 @@ const NavBar = () => {
                 </Link>
             </div>
 
-            {/* Navbar Center (ডেস্কটপ নেভিগেশন) */}
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2 text-lg font-medium">
                     {navOptions}
                 </ul>
             </div>
 
-            {/* Navbar End (লগ ইন/আউট এবং ইউজার প্রোফাইল) */}
             <div className="navbar-end gap-x-3">
                 {
                     user ? (
-                        // যদি ইউজার লগ ইন থাকে
                         <>
-                            {/* ইউজার ইমেজ (ডেইজি ইউআই অ্যাভাটার ব্যবহার করে গোল করে দেখালে সুন্দর লাগবে) */}
                             <div className="avatar">
                                 <div className="w-10 h-10 rounded-full ring ring-[#D1A054] ring-offset-base-100 ring-offset-2">
                                     <img
@@ -79,15 +75,15 @@ const NavBar = () => {
                                 </div>
                             </div>
                             {/* লগ আউট বাটন */}
-                            <button onClick={handleLogOut} className="btn bg-[#D1A054] hover:bg-[#b88c49] text-white font-semibold">
-                                Sign Out
+                            <button onClick={handleLogOut} className="btn btn-ghost  hover:bg-base-300 text-yellow-500 font-bold">
+                                Log Out
                             </button>
                         </>
                     ) : (
                         // যদি ইউজার লগ ইন না থাকে
-                        <Link to="/login">
-                            <button className="btn bg-[#D1A054] hover:bg-[#b88c49] text-white font-semibold">
-                                Sign In
+                        <Link to="/logIn">
+                            <button className="btn btn-ghost  hover:bg-base-300 text-yellow-500 font-bold">
+                               Log In
                             </button>
                         </Link>
                     )

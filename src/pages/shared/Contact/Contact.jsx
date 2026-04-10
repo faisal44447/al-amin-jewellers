@@ -1,7 +1,7 @@
 
 const Contact = () => {
     return (
-        <div className='bg-gradient-to-r from-black via-gray-900 to-black h-[400px] flex items-center justify-center mt-10 mx-5 rounded-5xl shadow-2xl'>
+        <div className='bg-gradient-to-r from-black via-gray-900 to-black h-[400px] flex items-center justify-center mt-5 mx-5 rounded-5xl mb-5 shadow-2xl'>
 
             <div className='text-center space-y-6'>
 
