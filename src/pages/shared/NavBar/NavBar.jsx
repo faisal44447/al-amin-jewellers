@@ -12,7 +12,7 @@ const NavBar = () => {
     const handleLogOut = () => {
         logOut()
             .then(() => {
-              
+
                 console.log("Logged out successfully");
             })
             .catch((error) => console.log("Log out error:", error));
@@ -20,9 +20,8 @@ const NavBar = () => {
 
     const navOptions = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/parent">Parent</Link></li>
-        <li><Link to="/submenu1">Submenu 1</Link></li>
-        <li><Link to="/item3">Item 3</Link></li>
+        <li><Link to="/staf-records">Staf Records</Link></li>
+        <li><Link to="/add-staf">Add Staf</Link></li>
     </>
 
     return (
@@ -83,7 +82,7 @@ const NavBar = () => {
                         // যদি ইউজার লগ ইন না থাকে
                         <Link to="/logIn">
                             <button className="btn btn-ghost  hover:bg-base-300 text-yellow-500 font-bold">
-                               Log In
+                                Log In
                             </button>
                         </Link>
                     )
